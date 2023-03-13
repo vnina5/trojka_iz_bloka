@@ -1,0 +1,171 @@
+@import url("https://use.typekit.net/hkm0fuu.css");
+
+* {
+  font-family: "myriad-pro", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Desktop - 10 */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #067fba;
+}
+
+#ekran {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0;
+  padding: 0;
+
+  background: #067fba;
+}
+
+/* ТРЕНУТНО ШУТИРА */
+.naslov {
+  position: absolute;
+  width: 1242px;
+  height: 105px;
+  left: 99px;
+  top: 30px;
+
+  font-size: 110px;
+  line-height: 154px;
+
+  color: #ffffff;
+}
+
+/* КОШ */
+.kos {
+  position: absolute;
+  width: 689px;
+  height: 50px;
+  left: 1px;
+  top: 179px;
+
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #ffffff;
+}
+
+/* ИМЕ ПРЕЗИМЕ */
+.ime {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 586px;
+  height: 85px;
+  left: 49px;
+  top: 229px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 35px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+/* следећи */
+#btn-sl {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 210px;
+  height: 85px;
+  left: 651px;
+  top: 229px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 30px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+/* ДОДАЈ кош */
+.btn {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 586px;
+  height: 85px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+#btn-dodaj1 {
+  left: 49px;
+  top: 348px;
+}
+#btn-dodaj2 {
+  left: 49px;
+  top: 463px;
+}
+
+#btn-izbrisi {
+  left: 49px;
+  top: 579px;
+}
+
+#btn-dao0 {
+  left: 49px;
+  top: 697px;
+}
+
+/* Назад */
+.btn-nazad {
+  position: absolute;
+  width: 230px;
+  height: 61px;
+  left: 49px;
+  top: 911px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #000000;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* ДО САД ЈЕ ДАО */
+.tekst {
+  position: absolute;
+  width: 780px;
+  height: 300px;
+  left: 660px;
+  top: 393px;
+
+  font-size: 96px;
+  line-height: 120px;
+
+  color: #ffffff;
+  /* 
+  width: 495px;
+  height: 85px;
+  left: 790px;
+  top: 572px; */
+}

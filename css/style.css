@@ -1,0 +1,371 @@
+@import url("https://use.typekit.net/hkm0fuu.css");
+
+* {
+  font-family: "myriad-pro", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #067fba;
+  position: relative;
+}
+
+/* L O G I N */
+#login {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-login {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vmax;
+  height: 40vmax;
+  /* height: 800px; */
+}
+
+.group-nazazd {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 75vmax;
+  margin: 20px 50px;
+}
+
+/* P A G E */
+#page {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vmax;
+  height: 45vmax;
+  margin: 10px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.group1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.group2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 40vmax;
+}
+
+/* K O S */
+#page-kos {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  align-items: center;
+  width: 75vmax;
+  height: 35vmax;
+}
+
+.col-kos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* width: 50vmax;
+  height: 35vmax; */
+  padding-left: 50px;
+}
+
+.tekst-kos {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 30px 0;
+
+  color: #ffffff;
+}
+
+/************** N A S L O V I **************/
+
+.veliki-naslov {
+  margin: 10px;
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.naslov {
+  font-size: 32px;
+  /* line-height: 35px; */
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+/* TEKST ZA TAKMICENJE*/
+.tekst {
+  margin: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: justify;
+
+  color: #ffffff;
+}
+
+/************** LABELE ZA INPUT POLJA **************/
+
+.label {
+  width: 300px;
+  /* height: 41px; */
+
+  font-size: 60px;
+  /* line-height: 115px; */
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.lbl {
+  width: 300px;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+/************** INPUT POLJA **************/
+.input {
+  box-sizing: border-box;
+  width: 500px;
+  height: 75px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.inpt {
+  box-sizing: border-box;
+  width: 400px;
+  height: 60px;
+  margin: 5px;
+  /* margin: 5px; */
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+
+  color: #000000;
+}
+
+/************** B U T T O N S **************/
+
+/* ZA ORGANIZATORE */
+.btn-cont {
+  box-sizing: border-box;
+
+  width: 275px;
+  height: 275px;
+  margin: 20px;
+  padding: 10px;
+
+  background: #1c639a;
+  border: 5px solid #ffffff;
+
+  font-size: 30px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+/* ZAPISNICKI STO */
+.btn {
+  box-sizing: border-box;
+  width: 155px;
+  height: 50px;
+  margin: 5px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+/* KOS */
+.btn-kos {
+  box-sizing: border-box;
+  width: 400px;
+  height: 60px;
+  margin: 5px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#btn-sl {
+  box-sizing: border-box;
+  width: 160px;
+  height: 60px;
+  margin: 5px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+/* СОРТИРАЈ ТАБЕЛУ */
+.btn-sortiraj {
+  /* position: absolute; */
+  width: 700px;
+  height: 55px;
+  margin: 5px;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 28px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+/* NAZAD */
+.btn-nazad {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 2.5%;
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 28px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+/* DALJE LOGIN */
+.btn-dalje {
+  /* position: absolute; */
+  width: 200px;
+  height: 60px;
+  /* right: 12.5%; */
+
+  background: #ffffff;
+  border: 5px solid #000000;
+
+  font-size: 30px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/************** T A B L E **************/
+
+#table {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  width: 700px;
+  max-height: 600px;
+  margin: 5px;
+
+  background-color: #ffffff;
+  border: 5px solid #000000;
+}
+.tabela {
+  width: 700px;
+  max-height: 600px;
+}
+.tabela thead th {
+  border: 2px solid #000000;
+  margin: 0;
+}
+.tabela td {
+  border: #000000 solid 1px;
+  margin: 0;
+  padding-inline: 5px;
+  height: 20px;
+  width: 250px;
+}

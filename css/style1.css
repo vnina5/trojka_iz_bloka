@@ -1,0 +1,75 @@
+@import url("https://use.typekit.net/hkm0fuu.css");
+
+* {
+  font-family: "myriad-pro", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* POCETNA */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #067fba;
+}
+
+#pocetna {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  width: 750px;
+  height: auto;
+  margin: 20px;
+}
+
+/* ДОБРОДОШЛИ! */
+.dobrodosli {
+  position: relative;
+  margin: 20px;
+  font-size: 100px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.group1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-cont {
+  box-sizing: border-box;
+
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
+  /* left: 339px;
+  top: 374px; */
+  margin: 50px;
+
+  background: #1c639a;
+  border: 5px solid #ffffff;
+
+  font-size: 31px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
