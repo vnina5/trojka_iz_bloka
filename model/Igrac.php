@@ -21,6 +21,13 @@ class Igrac {
         return $rez;
     }
 
+    public static function vratiDatogIgraca($igrac, mysqli $conn) {
+        $query = "SELECT * FROM igrac WHERE ime='$igrac->ime' AND prezime='$igrac->prezime'";
+
+        $rez = $conn->query($query);
+        return $rez;
+    }
+
     public static function vratiSve(mysqli $conn) {
         $query1 = "SELECT * FROM igrac";
 

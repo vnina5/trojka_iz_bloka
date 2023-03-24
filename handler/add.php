@@ -17,16 +17,22 @@ require "../model/Igrac.php";
         $novoPrezime = $_POST['prezime1'];
 
         $noviIgrac = new Igrac(null, $novoIme, $novoPrezime, null);
-        
-        $status = Igrac::dodajNovog($noviIgrac, $conn);
 
-        // echo $status;
+        $odg = Igrac::vratiDatogIgraca($noviIgrac, $conn); 
 
-        if ($status == 1) {   
-            echo $status;
-
-            // echo '<script>alert("Име или шифра нису тачни!\nПокушајте поново!");</script>';
-        } else {
+        if ($odg->num_rows == 0){  //igrac ne postoji u bazi
+            $status = Igrac::dodajNovog($noviIgrac, $conn);
+    
+            if ($status == 1) {   
+                echo $status;
+                // echo '<script>alert("Име или шифра нису тачни!\nПокушајте поново!");</script>';
+            } else {
+                echo "Failed";
+            }
+           
+        } else if ($odg->num_rows == 1) { //igrac vec postoji u bazi
+            echo 0;
+        } else { 
             echo "Failed";
         }
 
