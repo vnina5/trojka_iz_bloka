@@ -15,61 +15,6 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && $_POST["submit"]=="na
   exit();
 } 
 
-// $rezultat = Igrac::vratiSve($conn);
-
-
-
-// $_POST['sort'] = 'none';
-
-// $_SESSION['sort'] = 'none';
-
-// if (isset($_POST['sort'])) {
-//     $sort = $_POST['sort'];
-
-//     if ($sort == 'desc') {
-//         $rezultat = Igrac::vratiSveOpadajuce($conn);
-//     } else if ($sort == 'none') {
-//         $rezultat = Igrac::vratiSve($conn);
-//     }
-
-// } 
-
-// if (isset($_SESSION['tabela'])) $rezultat = $_SESSION['tabela'];
-
-
-// $sutiraju = Igrac::vratiAkoJeKosNull($conn);
-
-// $trenutno_kos1 = $sutiraju->fetch_array();
-// $_SESSION['trenutno_kos1'] = $trenutno_kos1;
-
-// $trenutno_kos2 = $sutiraju->fetch_array();
-// $_SESSION['trenutno_kos2'] = $trenutno_kos2;
-
-// $sledeci_kos1 = $sutiraju->fetch_array();
-// $sledeci_kos2 = $sutiraju->fetch_array();
-
-$prvi = Igrac::vratiPrvogSutera($conn);
-$_SESSION['trenutno_kos1'] = $prvi->fetch_array();
-// echo $_SESSION['trenutno_kos1']['ime'];
-
-$drugi = Igrac::vratiDrugogSutera($conn);
-$_SESSION['trenutno_kos2'] = $drugi->fetch_array();
-// echo $_SESSION['trenutno_kos2']['ime'];
-
-$treci = Igrac::vratiTrecegSutera($conn);
-$_SESSION['sledeci_kos1'] = $treci->fetch_array();
-// echo $_SESSION['sledeci_kos1']['ime'];
-
-$cetvrti = Igrac::vratiCetvrtogSutera($conn);
-$_SESSION['sledeci_kos2'] = $cetvrti->fetch_array();
-// echo $_SESSION['sledeci_kos2']['ime'];
-
-
-$trenutno_kos1 = $_SESSION['trenutno_kos1'];
-$trenutno_kos2 = $_SESSION['trenutno_kos2'];
-
-$sledeci_kos1 = $_SESSION['sledeci_kos1'];
-$sledeci_kos2 = $_SESSION['sledeci_kos2'];
 
 ?>
 
@@ -81,7 +26,6 @@ $sledeci_kos2 = $_SESSION['sledeci_kos2'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/style5.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <title>Тројка из блока</title>
@@ -150,7 +94,7 @@ $sledeci_kos2 = $_SESSION['sledeci_kos2'];
 
 
 
-    <script src="js/table.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

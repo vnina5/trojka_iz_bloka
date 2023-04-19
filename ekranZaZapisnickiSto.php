@@ -11,34 +11,10 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-// if (isset($_POST["submit"]) && $_POST["submit"]=="dodaj") {
-
-//   if (isset($_POST['ime']) && isset($_POST['prezime'])) {
-
-//     if ($_POST['ime'] == null || $_POST['prezime'] == null || $_POST['ime'] == "" || $_POST['prezime'] == "") {
-//       header('Location: ekranZaZapisnickiSto.php');
-//       exit();
-//     }
-
-//     $novoIme = $_POST['ime'];
-//     $novoPrezime = $_POST['prezime'];
-
-//     $noviIgrac = new Igrac(null, $novoIme, $novoPrezime, null);
-    
-//     Igrac::dodajNovog($noviIgrac, $conn);
-
-//     header('Location: ekranZaZapisnickiSto.php');
-//     exit();
-//   }
-// }
-
 if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
   header('Location: stranicaZaOrganizatore.php');
   exit();
 } 
-
-
-// $rezultat = Igrac::vratiSve($conn);
 
 ?>
 
@@ -206,7 +182,7 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
 
     </script>
 
-    <script src="js/table.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

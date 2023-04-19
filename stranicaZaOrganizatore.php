@@ -16,17 +16,6 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])) {
     exit();
   }
 
-  // if($_POST["submit"]=="za-zapisnicki-sto") 
-  //   header('Location: ekranZaZapisnickiSto.php');
-
-  // if($_POST["submit"]=="za-voditelja") 
-  //   header('Location: ekranZaVoditelja.php');
-
-  // if($_POST["submit"]=="za-brojaca-koseva") 
-  //   header('Location: ekranZaBrojacaKoseva.php');
-
-  // if($_POST["submit"]=="za-televizor") 
-  //   header('Location: ekranZaTelevizor.php');
 
 } 
 
@@ -54,7 +43,7 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])) {
           <a href="ekranZaZapisnickiSto.php"><button class="btn-cont">ЕКРАН ЗА ЗАПИСНИЧКИ СТО</button></a>
           <a href="ekranZaVoditelja.php"><button class="btn-cont">ЕКРАН ЗА ВОДИТЕЉА</button></a>
           <a href="ekranZaBrojacaKoseva.php"><button class="btn-cont">ЕКРАН ЗА БРОЈАЧА КОШЕВА</button></a>
-          <a href="ekranZaTelevizor.php"><button class="btn-cont">ЕКРАН ЗА ТЕЛЕВИЗОР</button></a>
+          <a href="stranicaZaTakmicare.php"><button class="btn-cont">ЕКРАН ЗА ТЕЛЕВИЗОР</button></a>
         </div>
 
         <form method="POST" action="#">

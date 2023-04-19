@@ -19,12 +19,6 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && ($_POST["submit"]=="n
 } 
 
 
-$kos = $_SESSION['kos'];
-if ($kos == 1) $igrac = $_SESSION['trenutno_kos1'];
-if ($kos == 2) $igrac = $_SESSION['trenutno_kos2'];
-
-$x = $igrac['kosevi'];
-
 ?>
 
 
@@ -50,9 +44,9 @@ $x = $igrac['kosevi'];
 
         <div class="col-kos">
 
-          <div class="naslov">КОШ <?php echo $kos ?></div>
+          <div class="naslov">КОШ <b data-kos>2</b></div>
           <div class="inline">
-            <div class="inpt"><?php echo $igrac['ime']," ",$igrac['prezime'] ?></div>
+            <div class="inpt" id="ime-kos2"><?php echo $igrac['ime']," ",$igrac['prezime'] ?></div>
             <button id="btn-sl">Следећи</button>
           </div>
 
@@ -69,7 +63,7 @@ $x = $igrac['kosevi'];
 
         </div>
 
-        <div class="tekst-kos">ДО САД ЈЕ ДАО <br> <b data-kos style="font-size: 70px;">x</b> Кошева</div>
+        <div class="tekst-kos">ДО САД ЈЕ ДАО <br> <b data-score style="font-size: 70px;">x</b> Кошева</div>
 
       </div>
       

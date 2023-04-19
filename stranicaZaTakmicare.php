@@ -10,19 +10,8 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
   exit();
 } 
 
-// $_SESSION['tabela'] = Igrac::vratiSve($conn);
-$rezultat = Igrac::vratiSve($conn);
+// $rezultat = Igrac::vratiSve($conn);
 
-// if (isset($_POST['sort'])) {
-//     $sort = $_POST['sort'];
-
-//     if ($sort == 'desc') {
-//         $rezultat = Igrac::vratiSveOpadajuce($conn);
-//     } else if ($sort == 'none') {
-//         $rezultat = Igrac::vratiSve($conn);
-//     }
-
-// } 
 
 ?>
 
@@ -82,37 +71,7 @@ $rezultat = Igrac::vratiSve($conn);
     </div>
 
 
-    <!-- <script>
-      
-      function sortiraj(){
-        var sort = $("#sort").val();
-        console.log(sort);
-
-        $("#table").html("");
-        console
-        $.post("handler/table.php", {sort: sort}, function(data) {
-          console.log(data);
-          $("#table").html(data);
-        });
-
-        if (sort == 'desc') {
-          $("#sort").val("none");
-          $("#sort").html("ВРАТИ ПРВОБИТНУ ТАБЕЛУ");
-          sort = $("#sort").val();
-          console.log("promoenjeno u "+ sort);
-
-        } else {
-          $("#sort").val("desc");
-          $("#sort").html("СОРТИРАЈ ТАБЕЛУ");
-          sort = sort = $("#sort").val();
-          console.log("promoenjeno u "+ sort);
-        }
-
-      }
-
-    </script> -->
-
-    <script src="js/table.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

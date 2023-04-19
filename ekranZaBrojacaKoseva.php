@@ -17,16 +17,6 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])){
     exit();
   } 
 
-  if($_POST["submit"]=="za-kos1") {
-    header('Location: ekranZaKos.php');
-    $_SESSION['kos'] = "1";
-  }
-
-
-  if($_POST["submit"]=="za-kos2"){
-    header('Location: ekranZaKos.php');
-    $_SESSION['kos'] = "2";
-  }
 } 
 
 ?>
@@ -47,15 +37,12 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])){
 
     <div id="page">
       
-      <form method="POST" action="#">
-        
         <div class="group2">
-          <button type="submit" name="submit" value="za-kos1" class="btn-cont">КОШ 1</button>
-          <button type="submit" name="submit" value="za-kos2" class="btn-cont">КОШ 2</button>
+          <a href="ekranZaKos1.php"><button class="btn-cont">КОШ 1</button></a>
+          <a href="ekranZaKos2.php"><button class="btn-cont">КОШ 2</button></a>
         </div>
 
         <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
-      </form>
       
     </div>
 
