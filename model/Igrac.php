@@ -44,7 +44,10 @@ class Igrac {
             $query2 = "UPDATE igrac SET id='$novi_id'-1 WHERE id='$igr_id'";
             $rez2 = $conn->query($query2);
 
-            if ($rez1 == 1 && $rez2 == 1) {   
+            $query3 = "UPDATE igrac SET id=id-1 WHERE id>'$igr_id'";
+            $rez3 = $conn->query($query3);
+
+            if ($rez1 == 1 && $rez2 == 1 && $rez3 == 1) {   
                 return 1;
             } else {
                 return -1;
