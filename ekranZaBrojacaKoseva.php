@@ -42,8 +42,11 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])){
           <a href="ekranZaKos2.php"><button class="btn-cont">КОШ 2</button></a>
         </div>
 
-        <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
-      
+        <form method="POST" action="#" class="nazad">
+          <br><br>
+          <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+        </form>   
+        
     </div>
 
   </body>

@@ -38,7 +38,7 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])) {
 
     <div id="page">
       
-      <div class="col-1">
+      <!-- <div class="col-1"> -->
         <div class="group2">
           <a href="ekranZaZapisnickiSto.php"><button class="btn-cont">ЕКРАН ЗА ЗАПИСНИЧКИ СТО</button></a>
           <a href="ekranZaVoditelja.php"><button class="btn-cont">ЕКРАН ЗА ВОДИТЕЉА</button></a>
@@ -46,10 +46,15 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])) {
           <a href="stranicaZaTakmicare.php"><button class="btn-cont">ЕКРАН ЗА ТЕЛЕВИЗОР</button></a>
         </div>
 
-        <form method="POST" action="#">
+        <div>
+          
+        </div>
+
+        <form method="POST" action="#" class="nazad">
+          <br><br>
           <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
         </form>
-      </div>
+      <!-- </div> -->
       
     </div>
 

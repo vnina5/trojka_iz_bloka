@@ -23,13 +23,16 @@ $(document).ready(function () {
   naKomKosuSutira();
 
   setInterval(function () {
-    if (isFinal) {
-      if (order == 1) urlSort = "./handler/getDataOrderedFinal.php";
-      else urlSort = "./handler/getDataFinal.php";
-    } else {
-      if (order == 1) urlSort = "./handler/getDataOrdered.php";
-      else urlSort = "./handler/getData.php";
-    }
+    // if (isFinal) {
+    //   if (order == 1) urlSort = "./handler/getDataOrderedFinal.php";
+    //   else urlSort = "./handler/getDataFinal.php";
+    // } else {
+    //   if (order == 1) urlSort = "./handler/getDataOrdered.php";
+    //   else urlSort = "./handler/getData.php";
+    // }
+
+    if (order == 1) urlSort = "./handler/getDataOrdered.php";
+    else urlSort = "./handler/getData.php";
 
     setTable(urlSort);
   }, 1000);
@@ -285,49 +288,3 @@ function addFinal(rows) {
     });
   });
 }
-
-// ==================================================
-// DODAVANJE NOVOG IGRACA U TABELU
-
-// function addNewPlayer(event) {
-// event.preventDefault(); // spriječi uobičajeno slanje forme
-// var formData = $(this).serialize(); // dohvati podatke iz forme
-// $.ajax({
-//   url: "./handler/add.php", // putanja do PHP skripte koja će dodati novi red
-//   type: "POST",
-//   data: formData, // podaci koje šaljemo u PHP skriptu
-//   success: function (response) {
-//     console.log(response); // ispiši odgovor u konzoli
-//   },
-// });
-
-//   var form = $("#dodajNovog")[0];
-//   var formData = new FormData(form);
-//   event.preventDefault();
-//   // console.log(formData);
-
-//   request = $.ajax({
-//     url: "./handler/add.php",
-//     type: "POST",
-//     processData: false,
-//     contentType: false,
-//     data: formData,
-//   });
-//   // console.log(request);
-
-//   request.done(function (response, textStatus, jqXHR) {
-//     // console.log(textStatus);
-//     // console.log(jqXHR);
-//     console.log(response);
-
-//     if (response == 1) {
-//       alert("Uspesno dodato");
-//     } else {
-//       console.log("Neuspesno" + response);
-//     }
-//   });
-
-//   request.fail(function (jqXHR, textStatus, errorThrown) {
-//     console.error("Greska: " + textStatus, errorThrown);
-//   });
-// }

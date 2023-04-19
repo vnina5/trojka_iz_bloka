@@ -56,14 +56,14 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && ($_POST["submit"]=="n
           <button class="btn-kos" id="btn-izbrisi">ИЗБРИШИ КОШ</button>
           <button class="btn-kos" id="btn-dao0">Дао је 0 кошева</button>
 
-          <br><br>
-          <form method="POST" action="#">
-            <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
-          </form>
-
         </div>
 
-        <div class="tekst-kos">ДО САД ЈЕ ДАО <br> <b data-score style="font-size: 70px;">x</b> Кошева</div>
+        <div class="tekst-kos">ДО САД ЈЕ ДАО <br> <b data-score class="score">x</b> Кошева</div>
+
+ 
+        <form method="POST" action="#" class="nazad">
+          <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+        </form>
 
       </div>
       

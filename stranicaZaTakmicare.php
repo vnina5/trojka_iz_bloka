@@ -32,6 +32,10 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
 
     <div id="page">
 
+      <div class="div-logo">
+        <img src="img/image1.png" alt="СРБИ ЗА СРБЕ" class="logo" />
+      </div>
+
       <div class="col">
         <div class="veliki-naslov">СРЕЋНО НА ТАКМИЧЕЊУ!</div>
         <div class="tekst">Хвала на пријави за такмичење! <br>
@@ -43,9 +47,7 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
         </div>
         <br>
 
-        <form method="POST" action="#" class="nazad">
-          <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
-        </form>
+
       </div>
   
 
@@ -67,6 +69,15 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
         <button class="btn-sortiraj" id="sort" value="desc" >СОРТИРАЈ ТАБЕЛУ</button>
         <!-- kad se sortira tabela tu ce pisati ВРАТИ ПРВОБИТНУ ТАБЕЛУ -->
       </div>
+
+      <div class="sponzori">
+        prostor za sponzore
+      </div>
+
+      <form method="POST" action="#" class="nazad">
+        <br><br>
+        <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+      </form>
 
     </div>
 

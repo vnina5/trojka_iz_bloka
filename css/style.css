@@ -204,7 +204,6 @@ body {
   width: 400px;
   height: 60px;
   margin: 5px;
-  /* margin: 5px; */
 
   background: #ffffff;
   border: 5px solid #000000;
@@ -309,6 +308,7 @@ body {
   width: 200px;
   height: 50px;
   left: 2.5%;
+  bottom: 0;
 
   background: #ffffff;
   border: 5px solid #000000;
@@ -368,4 +368,324 @@ button:hover {
   padding-inline: 5px;
   height: 20px;
   width: 250px;
+}
+
+.score {
+  font-size: 70px;
+}
+
+/* * * * * HIDE * * * * */
+.sponzori {
+  display: none;
+}
+
+.logo {
+  display: none;
+}
+
+/* ************************************************************************************ */
+/* ****************************  M E D I A    S C R E E N  **************************** */
+/* ************************************************************************************ */
+
+@media screen and (max-width: 900px) {
+  * {
+    font-weight: 600;
+  }
+
+  /* L O G I N */
+  #login {
+    flex-direction: column;
+  }
+
+  .group-login {
+    width: 100%;
+    height: 100%;
+  }
+
+  .group-nazazd {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 5px;
+  }
+
+  /* P A G E */
+  #page {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+  }
+
+  .inline {
+    flex-direction: column;
+  }
+
+  .group2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    margin: 50px 0;
+  }
+
+  /* K O S */
+
+  #row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .col-kos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .tekst-kos {
+    font-size: 30px;
+  }
+
+  /************** N A S L O V I **************/
+
+  .veliki-naslov {
+    margin: 10px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  .naslov {
+    font-size: 30px;
+    /* line-height: 35px; */
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  /* TEKST ZA TAKMICENJE*/
+  .tekst {
+    margin: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  /************** LABELE ZA INPUT POLJA **************/
+
+  .label {
+    width: 200px;
+    font-size: 25px;
+  }
+
+  .lbl {
+    width: 250px;
+    font-size: 20px;
+  }
+
+  /************** INPUT POLJA **************/
+  .input {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 3px solid #000000;
+
+    font-size: 22px;
+  }
+
+  .inpt {
+    width: 300px;
+    height: 50px;
+    margin: 5px;
+
+    border: 3px solid #000000;
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  /************** B U T T O N S **************/
+
+  /* ZA ORGANIZATORE */
+  .btn-cont {
+    width: 175px;
+    height: 175px;
+    margin: 5px;
+
+    border: 3px solid #ffffff;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  /* ZAPISNICKI STO */
+  .btn {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+
+    border: 3px solid #000000;
+
+    font-size: 20px;
+  }
+
+  /* KOS */
+  .btn-kos {
+    box-sizing: border-box;
+    width: 350px;
+    height: 50px;
+    margin: 5px;
+
+    border: 3px solid #000000;
+
+    font-size: 20px;
+  }
+
+  #btn-sl {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid #000000;
+
+    font-size: 20px;
+  }
+
+  /* СОРТИРАЈ ТАБЕЛУ */
+  .btn-sortiraj {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    margin: 5px;
+
+    border: 3px solid #000000;
+
+    font-size: 22px;
+  }
+
+  /* NAZAD */
+  .btn-nazad {
+    position: relative;
+    left: 0;
+    width: 100%;
+    /* max-width: 400px; */
+    height: 60px;
+    /* margin: 5px; */
+
+    border: 3px solid #000000;
+    font-size: 22px;
+  }
+
+  .nazad {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    /* margin: 0; */
+    /* padding: 0; */
+  }
+
+  /* DALJE LOGIN */
+  .btn-dalje {
+    width: 80%;
+    height: 60px;
+    margin: 20px 0;
+    border: 3px solid #000000;
+
+    font-size: 22px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /************** T A B L E **************/
+
+  #table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 5px;
+    font-size: 12px;
+
+    border: 3px solid #000000;
+  }
+  .tabela {
+    width: 100%;
+    /* max-height: 600px; */
+  }
+  .tabela thead th {
+    border: 1px solid #000000;
+    margin: 0;
+  }
+  .tabela td {
+    border: #000000 solid 1px;
+    margin: 0;
+    padding-inline: 5px;
+    height: 20px;
+    width: 40%;
+  }
+
+  .score {
+    font-size: 50px;
+  }
+
+  /* * * * * HIDE * * * * */
+  .sponzori {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: 10px;
+    background-color: grey;
+    border: 3px solid #000000;
+  }
+
+  .logo {
+    display: flex;
+    position: relative;
+    /* left: 0; */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    /* margin: 10px; */
+  }
+
+  .div-logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
 }

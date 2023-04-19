@@ -28,6 +28,12 @@
   <body>
 
     <div id="pocetna">
+
+      <div class="div-logo">
+        <img src="img/image1.png" alt="СРБИ ЗА СРБЕ" class="logo" />
+      </div>
+
+
       <div class="dobrodosli">ДОБРОДОШЛИ!</div>
 
       <div class="group1">
@@ -40,27 +46,12 @@
         </button></a>
       </div>
 
-      <!-- <form method="POST" action="#" class="group1">
-      <button
-          type="submit"
-          name="submit"
-          value="za-takmicare"
-          class="btn-za-takmicare"
-        >
-          АПЛИКАЦИЈА ЗА ТАКМИЧАРЕ
-        </button>
+      <div class="sponzori">
+        prostor za sponzore
+      </div>
 
-        <button
-          type="submit"
-          name="submit"
-          value="za-organizatore"
-          class="btn-za-organizatore"
-        >
-          АПЛИКАЦИЈА ЗА ОРГАНИЗАТОРЕ
-        </button>
-      </form> -->
+      <img src="img/image1.png" alt="СРБИ ЗА СРБЕ" class="logo-index" />
 
-      <img src="img/image1.png" alt="СРБИ ЗА СРБЕ" class="logo" />
     </div>
 
   </body>
