@@ -28,8 +28,40 @@ class Igrac {
         return $rez;
     }
 
+    public static function premestiIgraca($igrac, mysqli $conn) {
+        $igr = Igrac::vratiDatogIgraca($igrac, $conn);
+        if ($igr->num_rows == 1) { //igrac postoji u bazi
+
+            $igr_id = $igr->fetch_array()[0];
+
+            $sut_null = Igrac::vratiPrvogSutera($conn)->fetch_array();
+            $novi_id = $sut_null[0];
+            // echo $sut_null[0];
+  
+            $query1 = "UPDATE igrac SET id=id-1 WHERE id<'$novi_id'";
+            $rez1 = $conn->query($query1);
+    
+            $query2 = "UPDATE igrac SET id='$novi_id'-1 WHERE id='$igr_id'";
+            $rez2 = $conn->query($query2);
+
+            if ($rez1 == 1 && $rez2 == 1) {   
+                return 1;
+            } else {
+                return -1;
+            }
+           
+        } else if ($igr->num_rows == 0) { //igrac ne postoji u bazi
+            return 0;
+        } else {
+            return -1;
+        }
+
+    }
+
+
+
     public static function vratiSve(mysqli $conn) {
-        $query1 = "SELECT * FROM igrac";
+        $query1 = "SELECT * FROM igrac ORDER BY id";
 
         $rez = $conn->query($query1);
         return $rez;
@@ -43,18 +75,20 @@ class Igrac {
     }
 
     public static function vratiAkoJeKosNull(mysqli $conn) {
-        $query = "SELECT * FROM igrac WHERE kosevi IS NULL";
+        $query = "SELECT * FROM igrac WHERE kosevi IS NULL ORDER BY id";
 
         $rez = $conn->query($query);
         return $rez;
     }
 
     public static function vratiAkoKosNijeNull(mysqli $conn) {
-        $query = "SELECT * FROM igrac WHERE kosevi IS NOT NULL";
+        $query = "SELECT * FROM igrac WHERE kosevi IS NOT NULL ORDER BY id";
 
         $rez = $conn->query($query);
         return $rez;
     }
+
+
 
     public static function vratiPrvogSutera(mysqli $conn) {
         $query = "SELECT * FROM igrac WHERE kosevi IS NULL LIMIT 1";
@@ -86,6 +120,20 @@ class Igrac {
     
     public static function vratiSutere(mysqli $conn) {
         $query = "SELECT * FROM igrac WHERE kosevi IS NULL LIMIT 4";
+
+        $rez = $conn->query($query);
+        return $rez;
+    }
+
+    public static function vratiSutereIKos(mysqli $conn) {
+        $query = "SELECT * FROM igrac WHERE kosevi IS NULL AND id % 2 = 1";
+
+        $rez = $conn->query($query);
+        return $rez;
+    }
+
+    public static function vratiSutereIIKos(mysqli $conn) {
+        $query = "SELECT * FROM igrac WHERE kosevi IS NULL AND id % 2 = 0";
 
         $rez = $conn->query($query);
         return $rez;

@@ -348,7 +348,7 @@ button:hover {
   align-items: center;
   /* justify-content: space-around; */
   width: 700px;
-  max-height: 600px;
+  height: 600px;
   margin: 5px;
 
   background-color: #ffffff;
@@ -356,7 +356,7 @@ button:hover {
 }
 .tabela {
   width: 700px;
-  max-height: 600px;
+  /* max-height: 600px; */
 }
 .tabela thead th {
   border: 2px solid #000000;

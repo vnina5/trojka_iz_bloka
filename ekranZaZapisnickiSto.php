@@ -162,46 +162,46 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
 
 
 
-      // $('#prmestiDaSutira').submit(function () {
+      $('#prmestiDaSutira').submit(function () {
 
-      //     var form = $('#prmestiDaSutira')[0];
-      //     // console.log(form);
-      //     var formData = new FormData(form);
-      //     event.preventDefault();  
-      //     console.log(formData);
+          var form = $('#prmestiDaSutira')[0];
+          // console.log(form);
+          var formData = new FormData(form);
+          event.preventDefault();  
+          console.log(formData);
 
-      //     request = $.ajax({  
-      //         url: 'handler/premesti.php',  
-      //         type: 'post', 
-      //         processData: false,
-      //         contentType: false,
-      //         data: formData
-      //     });
-      //     // console.log(request);
+          request = $.ajax({  
+              url: 'handler/premesti.php',  
+              type: 'post', 
+              processData: false,
+              contentType: false,
+              data: formData
+          });
+          // console.log(request);
 
-      //     request.done(function (response, textStatus, jqXHR) {
-      //         // console.log(textStatus);
-      //         // console.log(jqXHR);
-      //         console.log(response);
+          request.done(function (response, textStatus, jqXHR) {
+              // console.log(textStatus);
+              // console.log(jqXHR);
+              console.log(response);
 
-      //         // if (response === "Success") {
-      //         if (response == 1) {
-      //             alert("Играч је успешно додат!");
-      //             $("#ime2").val(null);
-      //             $("#prezime2").val(null);
-      //         } else if (response == 0) {
-      //           alert("Играч са истим именом и презименом већ постоји у бази!\nДодајте још неки карактер!");
-      //         }
-      //         else {
-      //             alert("Играч није додат!\nПокушајте поново!");
-      //         }
-      //     });
+              // if (response === "Success") {
+              if (response == 1) {
+                  alert("Играч је премештен да шутира следећи!");
+                  $("#ime2").val(null);
+                  $("#prezime2").val(null);
+              } else if (response == 0) {
+                alert("Играч са тим именом и презименом не постоји у бази!\nПокушајте поново!");
+              }
+              else {
+                  alert("Играч није додат!\nПокушајте поново!");
+              }
+          });
 
-      //     request.fail(function (jqXHR, textStatus, errorThrown) {
-      //         console.error('Greska: ' + textStatus, errorThrown);
-      //     });
+          request.fail(function (jqXHR, textStatus, errorThrown) {
+              console.error('Greska: ' + textStatus, errorThrown);
+          });
 
-      // }); 
+      }); 
 
 
     </script>
