@@ -62,6 +62,10 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
 
         <br>
 
+        <form method="POST" action="#" class="nazad komp">
+          <br><br>
+          <button type="submit" name="submit" value="nazad" class="btn-nazad komp">Назад</button>
+        </form>
 
       </div>
 
@@ -85,9 +89,9 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
         <button class="btn-sortiraj" id="sort" value="desc">СОРТИРАЈ ТАБЕЛУ</button>
       </div>
 
-      <form method="POST" action="#" class="nazad">
+      <form method="POST" action="#" class="nazad tel">
         <br><br>
-        <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+        <button type="submit" name="submit" value="nazad" class="btn-nazad tel">Назад</button>
       </form>
       
 

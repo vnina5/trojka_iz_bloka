@@ -59,7 +59,11 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && $_POST["submit"]=="na
         <div class="lbl kos-sl2">КОШ 2</div>
         <div class="inpt" id="ime-sl2"></div>
 
-        <br><br>
+        <br>
+        <form method="POST" action="#" class="nazad komp">
+          <br><br>
+          <button type="submit" name="submit" value="nazad" class="btn-nazad komp">Назад</button>
+        </form>
 
 
       </div>
@@ -85,9 +89,9 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && $_POST["submit"]=="na
 
       </div>
 
-      <form method="POST" action="#" class="nazad">
+      <form method="POST" action="#" class="nazad tel">
         <br><br>
-        <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+        <button type="submit" name="submit" value="nazad" class="btn-nazad tel">Назад</button>
       </form>
 
 

@@ -45,8 +45,11 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
           Кликом на дугме испод табеле, сортирате табелу, како бисте знали да ли сте прошли у финале. <br>
           У финале најчешће иде првих 10-20 такмичара.
         </div>
-        <br>
 
+        <form method="POST" action="#" class="nazad komp">
+          <br><br>
+          <button type="submit" name="submit" value="nazad" class="btn-nazad komp">Назад</button>
+        </form>
 
       </div>
   
@@ -66,17 +69,18 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="nazad") {
         </table>
         </div>
 
+
         <button class="btn-sortiraj" id="sort" value="desc" >СОРТИРАЈ ТАБЕЛУ</button>
         <!-- kad se sortira tabela tu ce pisati ВРАТИ ПРВОБИТНУ ТАБЕЛУ -->
       </div>
 
-      <div class="sponzori">
+      <div class="sponzori tel">
         prostor za sponzore
       </div>
 
-      <form method="POST" action="#" class="nazad">
+      <form method="POST" action="#" class="nazad tel">
         <br><br>
-        <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
+        <button type="submit" name="submit" value="nazad" class="btn-nazad tel">Назад</button>
       </form>
 
     </div>

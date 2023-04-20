@@ -37,15 +37,23 @@ if (isset($_SESSION['user']) && isset($_POST["submit"])){
 
     <div id="page">
       
+      <div class="col">
         <div class="group2">
           <a href="ekranZaKos1.php"><button class="btn-cont">КОШ 1</button></a>
           <a href="ekranZaKos2.php"><button class="btn-cont">КОШ 2</button></a>
         </div>
 
-        <form method="POST" action="#" class="nazad">
+        <form method="POST" action="#" class="nazad komp">
           <br><br>
-          <button type="submit" name="submit" value="nazad" class="btn-nazad">Назад</button>
-        </form>   
+          <button type="submit" name="submit" value="nazad" class="btn-nazad komp">Назад</button>
+        </form>
+
+      </div>
+      
+      <form method="POST" action="#" class="nazad tel">
+        <br><br>
+        <button type="submit" name="submit" value="nazad" class="btn-nazad tel">Назад</button>
+      </form> 
         
     </div>
 
