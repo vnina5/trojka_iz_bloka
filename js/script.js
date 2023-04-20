@@ -49,9 +49,6 @@ $(document).ready(function () {
       sortTableFinal(broj);
       isFinal = true;
       order = 1;
-
-      // kopirajTabelu();
-      // console.log("finale");
     } else {
       alert("Нисте унели одговарајући број. Покушајте поново!");
     }
@@ -312,45 +309,45 @@ function addFinal(rows) {
 
 // ---------------------------------------------------------------
 
-function kopirajTabelu() {
-  var rows = [];
-  $.ajax({
-    type: "GET",
-    url: "./handler/getDataOrdered.php",
-    dataType: "json",
-    success: function (data) {
-      $.each(data, function (i, item) {
-        if (item.kosevi == null) return;
+// function kopirajTabelu() {
+//   var rows = [];
+//   $.ajax({
+//     type: "GET",
+//     url: "./handler/getDataOrdered.php",
+//     dataType: "json",
+//     success: function (data) {
+//       $.each(data, function (i, item) {
+//         if (item.kosevi == null) return;
 
-        // if (i >= 9 && item.kosevi != rows[rows.length - 1].kosevi) {
-        //   return;
-        // }
+//         // if (i >= 9 && item.kosevi != rows[rows.length - 1].kosevi) {
+//         //   return;
+//         // }
 
-        rows[i] = item;
-      });
-      // console.log(data);
-      ubaciUTabelu(rows);
-    },
-  });
-}
+//         rows[i] = item;
+//       });
+//       // console.log(data);
+//       ubaciUTabelu(rows);
+//     },
+//   });
+// }
 
-function ubaciUTabelu(rows) {
-  $.ajax({
-    type: "DELETE",
-    url: "./handler/deleteAllFinal.php",
-    success: function (response) {
-      console.log(response); // ispiši odgovor u konzoli
-    },
-  });
-  console.log(rows);
-  $.each(rows, function (i, item) {
-    $.ajax({
-      type: "POST",
-      url: "./handler/addFinalFinal.php",
-      data: item, // podaci koje šaljemo u PHP skriptu
-      success: function (response) {
-        console.log(response); // ispiši odgovor u konzoli
-      },
-    });
-  });
-}
+// function ubaciUTabelu(rows) {
+//   $.ajax({
+//     type: "DELETE",
+//     url: "./handler/deleteAllFinal.php",
+//     success: function (response) {
+//       console.log(response); // ispiši odgovor u konzoli
+//     },
+//   });
+//   console.log(rows);
+//   $.each(rows, function (i, item) {
+//     $.ajax({
+//       type: "POST",
+//       url: "./handler/addFinalFinal.php",
+//       data: item, // podaci koje šaljemo u PHP skriptu
+//       success: function (response) {
+//         console.log(response); // ispiši odgovor u konzoli
+//       },
+//     });
+//   });
+// }
