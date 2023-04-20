@@ -2,6 +2,7 @@
 
 require "model/dbBroker.php";
 require "model/Igrac.php";
+require "model/User.php";
 
 session_start();
 
@@ -10,18 +11,36 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="login") {
         $ime = $_POST['ime'];
         $sifra = $_POST['sifra'];
 
-        if($ime == "123" && $sifra == "123"){
-            $_SESSION['user'] = $ime;
-            header('Location: stranicaZaOrganizatore.php');
-            $_SESSION['user'] = $ime;
+        $user = new User(null, $ime, $sifra);
 
-            exit();
+        $odg = User::loginUser($user, $conn);
+
+        if ($odg->num_rows==1) {
+          $kor = $odg->fetch_assoc();
+
+          $_SESSION['user'] = $kor['ime'];
+          header('Location: stranicaZaOrganizatore.php');
+          // $_SESSION['user'] = $ime;
+
+          exit();
+
         } else{
           echo '<script>alert("Име или шифра нису тачни!\nПокушајте поново!");</script>';
-
-          // header("Location: loginZaOrganizatore.php");
-          // exit();
+        
         }
+
+
+
+
+        // if($ime == "123" && $sifra == "123"){
+        //     $_SESSION['user'] = $ime;
+        //     header('Location: stranicaZaOrganizatore.php');
+        //     $_SESSION['user'] = $ime;
+
+        //     exit();
+        // } else{
+        //   echo '<script>alert("Име или шифра нису тачни!\nПокушајте поново!");</script>';
+        // }
     }
 
     // exit();
