@@ -5,24 +5,26 @@ class Finale {
     public $ime;
     public $prezime;
     public $kosevi;
+    public $sutirao;
 
-    public function __construct($id = null, $ime=null, $prezime=null, $kosevi=null) {
+    public function __construct($id = null, $ime=null, $prezime=null, $kosevi=null, $sutirao=null) {
         $this->id = $id;
         $this->ime = $ime;
         $this->prezime = $prezime;
         $this->kosevi = $kosevi;
+        $this->sutirao = $sutirao;
     }
 
 
     public static function dodajNovog($igrac, mysqli $conn) {
-        $query = "INSERT INTO finale (ime, prezime, kosevi) VALUES ('$igrac->ime', '$igrac->prezime', null)";
+        $query = "INSERT INTO finale (ime, prezime, kosevi, sutirao) VALUES ('$igrac->ime', '$igrac->prezime', null, null)";
         
         $rez = $conn->query($query);
         return $rez;
     }
 
     public static function dodajUFinale($igrac, mysqli $conn) {
-        $query = "INSERT INTO finale (ime, prezime, kosevi) VALUES ('$igrac->ime', '$igrac->prezime', '$igrac->kosevi')";
+        $query = "INSERT INTO finale (ime, prezime, kosevi, sutirao) VALUES ('$igrac->ime', '$igrac->prezime', '$igrac->kosevi', null)";
         
         $rez = $conn->query($query);
         return $rez;

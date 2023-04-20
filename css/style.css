@@ -103,7 +103,7 @@ body {
 #row {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
 
   align-items: center;
   width: 75vmax;
@@ -210,7 +210,7 @@ body {
   background: #ffffff;
   border: 5px solid #000000;
 
-  font-size: 20px;
+  font-size: 22px;
   line-height: 50px;
   text-align: center;
 
@@ -260,19 +260,19 @@ body {
 .btn-kos {
   box-sizing: border-box;
   width: 375px;
-  height: 60px;
+  height: 50px;
   margin: 5px;
 
   background: #ffffff;
   border: 5px solid #000000;
 
-  font-size: 27px;
+  font-size: 25px;
   text-align: center;
   text-transform: uppercase;
 
   color: #000000;
 }
-#btn-sl {
+/* #btn-sl {
   box-sizing: border-box;
   width: 160px;
   height: 50px;
@@ -286,7 +286,7 @@ body {
   text-transform: uppercase;
 
   color: #000000;
-}
+} */
 
 /* СОРТИРАЈ ТАБЕЛУ */
 .btn-sortiraj {
@@ -402,27 +402,21 @@ button:hover {
   #row {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
 
     align-items: center;
     /* width: 90vw; */
     /* height: 35vh; */
   }
 
-  .col-kos {
-    width: 70vw;
-    height: 90vh;
-    padding-left: 0;
-  }
-
   .tekst-kos {
     font-size: 40px;
-    text-align: center;
+    /* text-align: center;
     text-transform: uppercase;
 
     width: 30vw;
     height: auto;
-    padding: 30px 0;
+    padding: 30px 0; */
   }
 
   /************** N A S L O V I **************/
@@ -509,7 +503,7 @@ button:hover {
     border: 4px solid #000000;
     font-size: 20px;
   }
-
+  /* 
   #btn-sl {
     width: 130px;
     height: 40px;
@@ -517,7 +511,7 @@ button:hover {
     border: 4px solid #000000;
 
     font-size: 20px;
-  }
+  } */
 
   /* СОРТИРАЈ ТАБЕЛУ */
   .btn-sortiraj {
@@ -640,7 +634,6 @@ button:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
   }
 
   .col-kos {
@@ -649,10 +642,17 @@ button:hover {
     justify-content: center;
     align-items: center;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
   }
 
   .tekst-kos {
     font-size: 30px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
   }
 
   /************** N A S L O V I **************/
@@ -677,8 +677,8 @@ button:hover {
 
   /* TEKST ZA TAKMICENJE*/
   .tekst {
-    margin: 10px;
-    font-size: 13px;
+    margin: 10px 20px;
+    font-size: 15px;
     text-transform: uppercase;
     text-align: center;
 
@@ -745,7 +745,7 @@ button:hover {
   /* KOS */
   .btn-kos {
     box-sizing: border-box;
-    width: 350px;
+    width: 300px;
     height: 50px;
     margin: 5px;
 
@@ -753,7 +753,7 @@ button:hover {
 
     font-size: 20px;
   }
-
+  /* 
   #btn-sl {
     width: 150px;
     height: 50px;
@@ -761,7 +761,7 @@ button:hover {
     border: 3px solid #000000;
 
     font-size: 20px;
-  }
+  } */
 
   /* СОРТИРАЈ ТАБЕЛУ */
   .btn-sortiraj {
@@ -780,7 +780,7 @@ button:hover {
     position: relative;
     left: auto;
     top: auto;
-    width: 100%;
+    width: 150px;
     /* max-width: 400px; */
     height: 60px;
     /* margin: 5px; */

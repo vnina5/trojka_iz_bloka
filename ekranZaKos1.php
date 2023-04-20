@@ -45,11 +45,10 @@ if (isset($_SESSION['user']) && isset($_POST["submit"]) && ($_POST["submit"]=="n
         <div class="col-kos">
 
           <div class="naslov">КОШ <b data-kos>1</b></div>
-          <div class="inline">
-            <div class="inpt" id="ime-kos1"></div>
-            <button id="btn-sl">Следећи</button>
-          </div>
 
+          <div class="inpt" id="ime-kos1"></div>
+          <br>
+          <button class="btn-kos" id="btn-sl">Следећи</button>
           <br>
           <button class="btn-kos" id="btn-dodaj1">ДОДАЈ 1 кош</button>
           <button class="btn-kos" id="btn-dodaj2">ДОДАЈ 2 КОША</button>

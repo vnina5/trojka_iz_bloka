@@ -38,10 +38,23 @@ $(document).ready(function () {
   }, 1000);
 
   $("#finale").click(function () {
-    confirm("Да ли сте сигурни да желите да почнете финале?");
-    sortTableFinal();
-    isFinal = true;
-    order = 1;
+    let broj = prompt(
+      "Ако сте сигурни да желите да почнете финале унесите број такмичара који пролазе у финале.\n(У финале може да прође од 8 до 20 такмичара)"
+    );
+
+    broj = parseInt(broj);
+    console.log(Number.isInteger(broj));
+
+    if (broj != null && broj != "" && broj >= 8 && broj <= 20) {
+      sortTableFinal(broj);
+      isFinal = true;
+      order = 1;
+
+      // kopirajTabelu();
+      // console.log("finale");
+    } else {
+      alert("Нисте унели одговарајући број. Покушајте поново!");
+    }
   });
 
   // $("#dodajNovog").submit(function (event) {
@@ -84,14 +97,14 @@ function getPlayerKos1() {
     url: "./handler/getPlayers1.php",
     dataType: "json",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
 
       $("#ime-tr1").empty();
       $("#ime-sl1").empty();
 
       let i = 0;
       $("#btn-tr1").click(function () {
-        console.log("sledeci 1");
+        // console.log("sledeci 1");
         i++;
         setPlayer(data[i], "#ime-tr1");
         setPlayer(data[i + 1], "#ime-sl1");
@@ -109,14 +122,14 @@ function getPlayerKos2() {
     url: "./handler/getPlayers2.php",
     dataType: "json",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
 
       $("#ime-tr2").empty();
       $("#ime-sl2").empty();
 
       let i = 0;
       $("#btn-tr2").click(function () {
-        console.log("sledeci 2");
+        // console.log("sledeci 2");
         i++;
         setPlayer(data[i], "#ime-tr2");
         setPlayer(data[i + 1], "#ime-sl2");
@@ -142,7 +155,7 @@ function kos1() {
     url: "./handler/getPlayers1.php",
     dataType: "json",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
 
       $("#ime-kos1").empty();
 
@@ -161,7 +174,7 @@ function kos2() {
     url: "./handler/getPlayers2.php",
     dataType: "json",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
 
       $("#ime-kos2").empty();
 
@@ -176,7 +189,13 @@ function kos2() {
 
 function dodajKos(rbkos, data) {
   let score = null;
-  console.log(rbkos);
+  if (rbkos == 1) score = data[i1].kosevi;
+  if (rbkos == 2) score = data[i2].kosevi;
+
+  if (score != null) {
+    score = parseInt(score);
+    $("[data-score]").html(score);
+  }
 
   $("#btn-dodaj1").click(function () {
     console.log("dao je 1 kos!");
@@ -198,7 +217,7 @@ function dodajKos(rbkos, data) {
 
   $("#btn-dao0").click(function () {
     console.log("dao je 0 koseva!");
-    score = 0;
+    score += 0;
     $("[data-score]").html(score);
   });
 
@@ -225,7 +244,7 @@ function dodajKos(rbkos, data) {
 }
 
 function writeScore(score, userID) {
-  console.log(score);
+  console.log("skor je" + score);
 
   let request = $.post("./handler/score.php", {
     score: score,
@@ -245,7 +264,7 @@ function setPlayer(player, where) {
 
 // ==================================================
 // SORTIRAJ ZA FINALE
-function sortTableFinal() {
+function sortTableFinal(br) {
   var rows = [];
 
   $.ajax({
@@ -256,7 +275,7 @@ function sortTableFinal() {
       $.each(data, function (i, item) {
         if (item.kosevi == null) return;
 
-        if (i >= 9 && item.kosevi != rows[rows.length - 1].kosevi) {
+        if (i >= br && item.kosevi != rows[rows.length - 1].kosevi) {
           return;
         }
 
@@ -271,6 +290,53 @@ function sortTableFinal() {
 function addFinal(rows) {
   $.ajax({
     type: "DELETE",
+    url: "./handler/deleteAll.php",
+    success: function (response) {
+      console.log(response); // ispiši odgovor u konzoli
+    },
+  });
+
+  $.each(rows, function (i, item) {
+    $.ajax({
+      type: "POST",
+      url: "./handler/addFinal.php",
+      data: item, // podaci koje šaljemo u PHP skriptu
+      success: function (response) {
+        console.log(response); // ispiši odgovor u konzoli
+        getPlayerKos1();
+        getPlayerKos2();
+      },
+    });
+  });
+}
+
+// ---------------------------------------------------------------
+
+function kopirajTabelu() {
+  var rows = [];
+  $.ajax({
+    type: "GET",
+    url: "./handler/getDataOrdered.php",
+    dataType: "json",
+    success: function (data) {
+      $.each(data, function (i, item) {
+        if (item.kosevi == null) return;
+
+        // if (i >= 9 && item.kosevi != rows[rows.length - 1].kosevi) {
+        //   return;
+        // }
+
+        rows[i] = item;
+      });
+      // console.log(data);
+      ubaciUTabelu(rows);
+    },
+  });
+}
+
+function ubaciUTabelu(rows) {
+  $.ajax({
+    type: "DELETE",
     url: "./handler/deleteAllFinal.php",
     success: function (response) {
       console.log(response); // ispiši odgovor u konzoli
@@ -280,7 +346,7 @@ function addFinal(rows) {
   $.each(rows, function (i, item) {
     $.ajax({
       type: "POST",
-      url: "./handler/addFinal.php",
+      url: "./handler/addFinalFinal.php",
       data: item, // podaci koje šaljemo u PHP skriptu
       success: function (response) {
         console.log(response); // ispiši odgovor u konzoli

@@ -16,7 +16,7 @@ require "../model/Igrac.php";
         $novoIme = $_POST['ime1'];
         $novoPrezime = $_POST['prezime1'];
 
-        $noviIgrac = new Igrac(null, $novoIme, $novoPrezime, null);
+        $noviIgrac = new Igrac(null, $novoIme, $novoPrezime, null, null);
 
         $odg = Igrac::vratiDatogIgraca($noviIgrac, $conn); 
 

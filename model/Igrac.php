@@ -5,17 +5,19 @@ class Igrac {
     public $ime;
     public $prezime;
     public $kosevi;
+    public $sutirao;
 
-    public function __construct($id = null, $ime=null, $prezime=null, $kosevi=null) {
+    public function __construct($id = null, $ime=null, $prezime=null, $kosevi=null, $sutirao=null) {
         $this->id = $id;
         $this->ime = $ime;
         $this->prezime = $prezime;
         $this->kosevi = $kosevi;
+        $this->sutiro = $sutirao;
     }
 
 
     public static function dodajNovog($igrac, mysqli $conn) {
-        $query = "INSERT INTO igrac (ime, prezime, kosevi) VALUES ('$igrac->ime', '$igrac->prezime', null)";
+        $query = "INSERT INTO igrac (ime, prezime, kosevi, sutirao) VALUES ('$igrac->ime', '$igrac->prezime', null, null)";
         
         $rez = $conn->query($query);
         return $rez;
@@ -129,14 +131,14 @@ class Igrac {
     // }
 
     public static function vratiSutereIKos(mysqli $conn) {
-        $query = "SELECT * FROM igrac WHERE kosevi IS NULL AND id % 2 = 1";
+        $query = "SELECT * FROM igrac WHERE sutirao IS NULL AND id % 2 = 1";
 
         $rez = $conn->query($query);
         return $rez;
     }
 
     public static function vratiSutereIIKos(mysqli $conn) {
-        $query = "SELECT * FROM igrac WHERE kosevi IS NULL AND id % 2 = 0";
+        $query = "SELECT * FROM igrac WHERE sutirao IS NULL AND id % 2 = 0";
 
         $rez = $conn->query($query);
         return $rez;
@@ -151,11 +153,18 @@ class Igrac {
         return;
     }
 
+    public static function upisiDaJeSutirao($id, mysqli $conn) {
+        $query = "UPDATE igrac SET sutirao=1 WHERE id='$id'";
+
+        $rez = $conn->query($query);
+        return;
+    }
+
 
 
 
     public static function dodajUFinale($igrac, mysqli $conn) {
-        $query = "INSERT INTO igrac (ime, prezime, kosevi) VALUES ('$igrac->ime', '$igrac->prezime', '$igrac->kosevi')";
+        $query = "INSERT INTO igrac (ime, prezime, kosevi, sutirao) VALUES ('$igrac->ime', '$igrac->prezime', '$igrac->kosevi', null)";
         
         $rez = $conn->query($query);
         return $rez;
