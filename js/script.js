@@ -7,6 +7,7 @@ $(document).ready(function () {
   var i1 = 0;
   var i2 = 0;
 
+  // sortiraj
   $("#sort").click(function () {
     order *= -1;
     // setTable(sortOrder);
@@ -37,6 +38,7 @@ $(document).ready(function () {
     setTable(urlSort);
   }, 1000);
 
+  // sortiraj za finale
   $("#finale").click(function () {
     let broj = prompt(
       "Ако сте сигурни да желите да почнете финале унесите број такмичара који пролазе у финале.\n(У финале може да прође од 8 до 20 такмичара)"
@@ -57,6 +59,18 @@ $(document).ready(function () {
   // $("#dodajNovog").submit(function (event) {
   //   addNewPlayer(event);
   // });
+
+  // kraj turnira - brise sve iz baze
+  $("#kraj").click(function () {
+    if (confirm("Да ли сте сигурни да желите да завршите турнир?")) {
+      deleteAll();
+    }
+  });
+
+  // osvezi kod voditelja
+  $("#osvezi").click(function () {
+    setTable("./handler/getData.php");
+  });
 });
 
 // ==================================================
@@ -304,6 +318,18 @@ function addFinal(rows) {
         getPlayerKos2();
       },
     });
+  });
+}
+
+// ==================================================
+// KRAJ TURNIRA - brise podatke iz baze
+function deleteAll() {
+  $.ajax({
+    type: "DELETE",
+    url: "./handler/deleteAll.php",
+    success: function (response) {
+      console.log(response); // ispiši odgovor u konzoli
+    },
   });
 }
 
